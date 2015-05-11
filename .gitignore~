@@ -1,6 +1,7 @@
 *.class
 *.classpath
 .settings/*
+src/config.properties
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/

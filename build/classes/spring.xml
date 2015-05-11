@@ -9,6 +9,8 @@
     http://www.springframework.org/schema/hadoop
     http://www.springframework.org/schema/hadoop/spring-hadoop.xsd">
 
+   
+
 	<!-- 配置自动扫描的包,忽略Controller -->
 	<context:component-scan base-package="com.robot"
 		use-default-filters="false">
@@ -24,7 +26,7 @@
 	<bean
 		class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor" />
 
-	<!-- ////////////////// 下面是系统配置 ///////////////////////////////////// -->
+	<!-- ////////////////// 下面是环境配置 ///////////////////////////////////// -->
 
 	<!-- Hadoop Configuration -->
 	<hdp:configuration resources="classpath:/hbase-site.xml" />

@@ -22,8 +22,9 @@
 
 		<!-- 指定自动生成数据表的策略 -->
 		<!--<property name="hbm2ddl.auto">update</property> -->
-		
+
 		<!-- 设置数据隔离级别 -->
 		<property name="connection.isolation">2</property>
+
 	</session-factory>
 </hibernate-configuration>

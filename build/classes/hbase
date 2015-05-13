@@ -1,0 +1,24 @@
+    <!-- hadoop配置 -->
+    <hdp:configuration resources="classpath:/hbase-site.xml" />
+    <hdp:hbase-configuration configuration-ref="hadoopConfiguration" />
+
+    <!-- hbase配置 -->
+    <bean id="hbaseTemplate" class="org.springframework.data.hadoop.hbase.HbaseTemplate"
+        p:configuration-ref="hbaseConfiguration" />
+
+    <!-- hbase表名配置 -->
+    <util:list id="hbaseTableNames">
+        <value>test</value>
+    </util:list>
+
+    <!-- hbase列族名配置 -->
+    <util:list id="hbaseTableColumnNames">
+        <value>attr</value>
+        <value>var</value>
+    </util:list>
+
+    <bean id="hbaseConfig" class="com.robot.config.HbaseConfig">
+        <constructor-arg name="mHbaseTemplate" ref="hbaseTemplate"></constructor-arg>
+        <constructor-arg name="mNameList" ref="hbaseTableNames"></constructor-arg>
+        <constructor-arg name="mColumnList" ref="hbaseTableColumnNames"></constructor-arg>
+    </bean>

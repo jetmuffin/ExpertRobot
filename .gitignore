@@ -2,7 +2,7 @@
 *.classpath
 build/*
 bin/*
-conf/mysql.properties
+config/mysql.properties
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/

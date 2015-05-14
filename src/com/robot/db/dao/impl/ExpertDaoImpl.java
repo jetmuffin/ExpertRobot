@@ -32,13 +32,14 @@ public class ExpertDaoImpl extends BaseDao implements ExpertDao {
 
 	@Override
 	public List<Expert> getByName(String name) {
-		// TODO Auto-generated method stub
-		return null;
+		String hql = "from Expert as expert where expert.name = ?";
+		List<Expert> experts = query(hql).setString(0, name).list();
+		return experts;
 	}
 
 	@Override
-	public Expert getById(String expertId) {
-		return (Expert) getSession().get(Expert.class, expertId);
+	public Expert getById(int expertId) {
+		return (Expert) get(Expert.class, expertId);
 	}
 
 	@Override

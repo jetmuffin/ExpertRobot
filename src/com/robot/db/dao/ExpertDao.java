@@ -27,7 +27,7 @@ public interface ExpertDao {
 	 * 根据id检索专家
 	 * @param expertId 专家id
 	 */
-	public Expert getById(String expertId);
+	public Expert getById(int expertId);
 	
 	/**
 	 * 删除专家信息

@@ -1,7 +1,7 @@
 *.class
 *.classpath
 .settings/*
-src/config.properties
+conf/mysql.properties
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/

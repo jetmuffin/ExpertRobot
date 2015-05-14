@@ -1,5 +1,8 @@
 package com.robot.db.dao.impl;
 
+import java.io.Serializable;
+
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -50,5 +53,11 @@ public class BaseDao {
 		getSession().saveOrUpdate(object);
 	}
 	
+	public Object get(Class arg0, Serializable arg1){
+		return getSession().get(arg0, arg1);
+	}
 	
+	public Query query(String hql){
+		return getSession().createQuery(hql);
+	}
 }

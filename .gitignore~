@@ -1,6 +1,6 @@
 *.class
 *.classpath
-.settings/*
+build/*
 conf/mysql.properties
 
 # Mobile Tools for Java (J2ME)
